@@ -1,0 +1,26 @@
+==============================
+Leak report:
+==============================
+c:\users\hsi-hung\desktop\workspace3\memorydebugger\driver.cpp -> line 24 -> function: project2_leaks
+c:\users\hsi-hung\desktop\workspace3\memorydebugger\driver.cpp -> line 33 -> function: project2_leaks
+c:\users\hsi-hung\desktop\workspace3\memorydebugger\driver.cpp -> line 16 -> function: project2_leaks_helper
+
+==============================
+Leak Statistics:
+==============================
+c:\users\hsi-hung\desktop\workspace3\memorydebugger\driver.cpp
+	Line 16 -	1 leaks	*
+	Line 24 -	1 leaks	*
+	Line 33 -	1 leaks	*
+	Total leaks in file: 3 leaks	***
+Total leaks in program: 3 leaks
+
+==============================
+Allocation Statistics:
+==============================
+c:\users\hsi-hung\desktop\workspace3\memorydebugger\driver.cpp
+	Line 16 -	1 allocs	*
+	Line 24 -	10 allocs	**********
+	Line 33 -	10 allocs	**********
+	Total allocs in file: 21 allocs	*********************
+Total allocs in program: 21 allocs
