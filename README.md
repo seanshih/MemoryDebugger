@@ -1,14 +1,10 @@
 # MemoryDebugger
 
-This is a memory debugger to detect the following memory bugs right when it happens. 
-
-1. Underflow
-
-2. Overflow
-
-3. Access after Deletion 
-
-4. Memory Leaks
+This is a memory debugger to detect the following memory bugs right when it happens.  
+1. Underflow  
+2. Overflow  
+3. Access after Deletion  
+4. Memory Leaks  
 
 Memory bugs could be difficult to trace if we could not halt the program right when the access violation happens. This memory debugger solves this problem by using windows **VirtualAlloc** function to set a **PAGE_NOACCESS** zone. 
 
@@ -20,9 +16,9 @@ Besides debugging, it also generates statistics reports. See *Report Format* for
 
 ## Usage
 To integrate, it only requires at most three lines. Do the following steps,
-1. Put the **new_override.cpp** in your project.
-2. include **new_override.h** in your main program
-3. At the beginning of *main()*, create a **LeakReporter** object.
+1. Put the **new_override.cpp** in your project.  
+2. include **new_override.h** in your main program.  
+3. At the beginning of *main()*, create a **LeakReporter** object.  
    It takes a c-style string as output file path. This object will report memory leak as well as allocation info when it is destructed. 
 ```c++
 LeakReporter reporter("leaks.log");
@@ -34,9 +30,9 @@ To set the detection mode, one could use *SetDetectionMode* **BEFORE** the creat
     LeakReporter::SetDetectMode(LeakReporter::BoundaryDetectMode::DETECT_OVERFLOW);
 ```
 Detection mode can be set to the followings
-1. DETECT_UNDERFLOW
-2. DETECT_OVERFLOW
-3. DETECT_NO_ACCESS_DETECTION
+1. DETECT_UNDERFLOW  
+2. DETECT_OVERFLOW  
+3. DETECT_NO_ACCESS_DETECTION  
 
 When setting it to DETECT_NO_ACCESS_DETECTION, it is like the original allocation without access violation detection. It will still detects unallocated memory addresses.
 
@@ -55,8 +51,7 @@ Besides leak information, it will always report allocation information that
 contains
 
 1. A statistics report about how many allocations for all lines of code that
-call new. 
-
+call new.  
 2. A "hot chart" will be provided on the right side for each line in
 the form of "star line". By comparing the length of the line, The user can 
 easily identify if there are lines that
