@@ -1,6 +1,7 @@
 # MemoryDebugger
 
-This is a memory debugger to detect the following memory bugs right when it happens.  
+This is a memory debugger to detect the following memory bugs right when it happens.
+
 1. Underflow  
 2. Overflow  
 3. Access after Deletion  
@@ -15,7 +16,8 @@ The memory leaks will be reported with its line number and file names when they 
 Besides debugging, it also generates statistics reports. See *Report Format* for more information.
 
 ## Usage
-To integrate, it only requires at most three lines. Do the following steps,
+To integrate, it only requires at most three lines. Do the following steps, 
+
 1. Put the **new_override.cpp** in your project.  
 2. include **new_override.h** in your main program.  
 3. At the beginning of *main()*, create a **LeakReporter** object.  
@@ -29,7 +31,8 @@ To set the detection mode, one could use *SetDetectionMode* **BEFORE** the creat
 ```c++
     LeakReporter::SetDetectMode(LeakReporter::BoundaryDetectMode::DETECT_OVERFLOW);
 ```
-Detection mode can be set to the followings
+Detection mode can be set to the followings,
+
 1. DETECT_UNDERFLOW  
 2. DETECT_OVERFLOW  
 3. DETECT_NO_ACCESS_DETECTION  
