@@ -1,9 +1,13 @@
 # MemoryDebugger
 
 This is a memory debugger to detect the following memory bugs right when it happens. 
+
 1. Underflow
+
 2. Overflow
+
 3. Access after Deletion 
+
 4. Memory Leaks
 
 Memory bugs could be difficult to trace if we could not halt the program right when the access violation happens. This memory debugger solves this problem by using windows **VirtualAlloc** function to set a **PAGE_NOACCESS** zone. 
