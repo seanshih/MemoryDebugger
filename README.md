@@ -37,7 +37,7 @@ Detection mode can be set to the followings,
 2. DETECT_OVERFLOW  
 3. DETECT_NO_ACCESS_DETECTION  
 
-When setting it to DETECT_NO_ACCESS_DETECTION, it is like the original allocation without access violation detection. It will still detects unallocated memory addresses.
+When setting it to DETECT_NO_ACCESS_DETECTION, it is like the original allocation without access violation detection. It will still detect unallocated memory addresses.
 
 Note that due to implementation restriction, we cannnot detect underflow and overflow at the same time.
 
