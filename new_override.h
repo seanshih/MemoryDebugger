@@ -1,5 +1,5 @@
 // A class for reporting memory leak when it is destructed
-
+ 
 #pragma once 
 #include <array>
 
